@@ -6,7 +6,7 @@ function MenuHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-500 p-5">
+    <nav className="bg-violet-500 p-5">
       <div className="container mx-auto flex justify-between items-center">
         <div className='flex items-center space-x-2'>
           <div className="text-white text-2xl font-extrabold">SakilaDB</div>
@@ -19,14 +19,12 @@ function MenuHeader() {
           </div>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-10">
-          <a href="/" className="text-white hover:text-gray-300">Home</a>
-          <a href="/films" className="text-white hover:text-gray-300">Film Page</a>
-          <a href="/customers" className="text-white hover:text-gray-300">Customer Page</a>
+          <a href="/" className="text-white hover:scale-110 hover:text-violet-200">Home</a>
+          <a href="/filmPage" className="text-white hover:scale-110 hover:text-violet-200">Film Page</a>
+          <a href="/customerPage" className="text-white hover:scale-110 hover:text-violet-200">Customer Page</a>
         </div>
 
-        {/* Hamburger Menu Button */}
         <div className="md:hidden">
           <button 
             onClick={() => setIsOpen(!isOpen)} 
@@ -39,12 +37,11 @@ function MenuHeader() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-3">
           <a href="/" className="block text-white py-2 px-4">Home</a>
-          <a href="/films" className="block text-white py-2 px-4">Film Page</a>
-          <a href="/customers" className="block text-white py-2 px-4">Customer Page</a>
+          <a href="/filmPage" className="block text-white py-2 px-4">Film Page</a>
+          <a href="/customerPage" className="block text-white py-2 px-4">Customer Page</a>
         </div>
       )}
     </nav>
