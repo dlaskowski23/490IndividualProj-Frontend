@@ -130,7 +130,7 @@ const Top5Actors = ({ onActorClick }) => {
             <p className="text-sm text-gray-600">Appears in {actor.movie_count} movies!</p>
           </div>
           <button 
-            className="bg-violet-500 text-white px-4 py-2 font-semibold outline outline-offset-4 outline-violet-500 rounded hover:bg-blue-600"
+            className="bg-violet-500 text-white px-4 py-2 font-semibold outline outline-offset-4 outline-violet-500 rounded hover:bg-violet-600"
             onClick={() => onActorClick(actor.actor_id)}
           >
             View Top Films
